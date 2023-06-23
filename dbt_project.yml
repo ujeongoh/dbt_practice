@@ -35,6 +35,8 @@ models:
       +materialized: table # dim 폴더 밑에 있는 테이블들은 모두 table로 빌드
     src:
       +materialized: ephemeral # CTE, 임시, src 테이블(view)들 삭제
+    analytics:
+      +materialized: table # 또는 쿼리에 {{ config(materialized='table') }} 입력
 
 
     # Config indicated by + and applies to all files under models/example/
