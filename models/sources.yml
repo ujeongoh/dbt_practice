@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: yujeong
+    schema: raw_data
+    tables:
+      - name: metadata
+        identifier: user_metadata
+      - name: event
+        identifier: user_event
+      - name: variant
+        identifier: user_variant
