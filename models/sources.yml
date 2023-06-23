@@ -8,5 +8,9 @@ sources:
         identifier: user_metadata
       - name: event
         identifier: user_event
+        loaded_at_field: datestamp # freshness를 결정하는 필드
+        freshness:
+          warn_after: { count: 1, period: hour } # 한시간 이상 뒤쳐져 있으면 경고
+          error_after: { count: 24, period: hour } # 24시간 뒤쳐져 있으면 에러
       - name: variant
         identifier: user_variant
